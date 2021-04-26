@@ -1,5 +1,6 @@
-= Design Patterns
-
+:toc-title: Design Patterns
+:toc: macro
+toc::[]
 
 == Object Oriented Design Tips
 
