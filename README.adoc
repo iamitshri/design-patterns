@@ -1,5 +1,8 @@
+:sectlinks:
+:sectnumlevels: 6
 :toc-title: Design Patterns
 :toc: macro
+:toclevels: 6
 toc::[]
 
 == Object Oriented Design Tips
