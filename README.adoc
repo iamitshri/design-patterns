@@ -112,6 +112,7 @@ Useful in controlling object creation e.g. singleton, flyweight
     * Representative for an object that may be expensive to create
     * Defers the creation of expensive object until its needed
     * Acts as a surrogate for the object before and while it is being created
+- e.g. java.rmi.* package
 
 == Behavioral
 
@@ -123,8 +124,6 @@ Useful in controlling object creation e.g. singleton, flyweight
 
 === Template
 
-=== Hollywood Principle (Don't call us, we will call you)
-
 === Visitor
 
 === Mediator
@@ -134,8 +133,12 @@ Useful in controlling object creation e.g. singleton, flyweight
 === Iterator
 
 === Chain of Responsibility
-
-
+- Use when you want to give more than one object a chance to handle a request.
+- Decouples the sender of the request and its receivers.
+- Each receiver contains reference to next receiver.
+- If receiver can not handle the request it passes to the next receiver.
+- Receiver can process request and then either propagate or drop
+- e.g. javax.servlet.Filter.doFilter method or mouseclick events on webpage
 
 == Additional References
 - https://github.com/marhan/effective-java-examples[marhan/effective-java-examples]
