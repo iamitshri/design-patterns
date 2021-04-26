@@ -6,6 +6,7 @@
 - SOLID
 * Single responsibility principle
 ** Classes should aim for high cohesiveness
+** Cohesion is a measure of how closely a class or a module supports a single purpose or responsibility.
 * Open Closed Principle
 ** Classes should be closed for modification but open for extension
 * Liskov Substitution Principle
@@ -133,17 +134,35 @@ Useful in controlling object creation e.g. singleton, flyweight
 === Strategy
 - Encapsulate interchangeable behaviors and use delegation to decide which behavior to use
 - e.g. custom comparator can be passed to this Collections.sort(list,comparator)
+
 === Template
 - Subclasses decide how to implement steps in the algorithm
 - Allows subclasses to define parts of an algorithm without modifying the overall structure or steps of the algorithm
 
 === Visitor
+- Allows you to add operations to a composite/object hierarchy structure without changing the structure itself.
+- Adding new operations is relatively easy.
+- The code for operations performed by the Visitor is centralized.
 
 === Mediator
+- Use the Mediator Pattern to centralize complex communications and control between related objects.
+- Components do not need to know about each other
+- They only talk to a mediator
+- Simplifies maintenance of the system by centralizing control logic.
 
 === Observer
+- A one-to-many dependency between objects so that when one object changes state all the dependents are notified
+- Publish-subscribe model where subscribers get notified when publisher notifies
 
 === Iterator
+- Allows traversal through a aggregate or a collection without exposing its internal details.
+- The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called an iterator
+
+=== Command
+- The Command Pattern allows us to decouple the requester of an action from the object that actually performs the action.
+- Encapsulates a request as an object
+- A command object encapsulates a request to do something (like turn on a light) on a specific object (say, the living room light object)
+
 
 === Chain of Responsibility
 - Use when you want to give more than one object a chance to handle a request.
@@ -157,8 +176,8 @@ Useful in controlling object creation e.g. singleton, flyweight
 - https://github.com/jbloch/effective-java-3e-source-code[jbloch/effective-java-3e-source-code]
 - https://github.com/HugoMatilla/Effective-JAVA-Summary[HugoMatilla/Effective-JAVA-Summary]
 - https://www.baeldung.com/java-composite-pattern[baeldung.com/java-composite-pattern]
-- https://refactoring.guru/design-patterns/composite[refactoring.guru/design-patterns/composite]
-- https://github.com/RefactoringGuru/design-patterns-java[link to examples]
+- https://refactoring.guru/design-patterns[https://refactoring.guru/design-patterns]
 - https://en.wikipedia.org/wiki/Unix_philosophy[Unix Philosophy]
+- Head First Design Patterns Book by Elisabeth Freeman and Kathy Sierra
 
 
