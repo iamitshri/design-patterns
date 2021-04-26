@@ -1,6 +1,5 @@
 = Design Patterns
 
-== https://github.com/RefactoringGuru/design-patterns-java[link to examples]
 
 == Object Oriented Design Tips
 
@@ -14,8 +13,6 @@
 * Dependency Inversion Principle
     - Depend upon abstractions. Do not depend upon concrete classes.
     - High-level components should not depend on our low-level components, rather, they should both depend on abstractions.
-
-
 - YAGNI
 * You ain't going to need it.
 * You don't need it now.
@@ -23,16 +20,16 @@
 - KISS
 * Keep it simple stud
 - DRY
-* Dont repeat yourself
+* Don't repeat yourself
 - OverEngineering
 * Avoid adding those extra features, safety, bells and whistles your customers don't care about
-- https://en.wikipedia.org/wiki/Unix_philosophy[Unix Philosophy]
-
-- Parts of code that changes together, stays together
+- Encapsulate what varies
+* Parts of code that changes together, stays together
 * Separate out parts of code that vary or change from those that remain the same.
+- Favor Composition over inheritance
 - Code to an interface and not against a concrete implementation
 - Encapsulate behaviors
-- Favor Composition over inheritance
+- Don't call us we will call you
 - Components are loosely coupled and talk to each other over a well-defined API
 - Fine line between complexity and understandability vs Flexible & Extensible
 
@@ -107,6 +104,14 @@ Useful in controlling object creation e.g. singleton, flyweight
 - Common state between objects is intrinsic.
 
 === Proxy
+- Proxies control and manage access to real object (think of Paralegal and Lawyer)
+- The Decorator Pattern adds behavior to an object, while Proxy controls access.
+- Remote Proxy
+    * Local representative for an object that lives in a different jvm
+- Virtual Proxy:
+    * Representative for an object that may be expensive to create
+    * Defers the creation of expensive object until its needed
+    * Acts as a surrogate for the object before and while it is being created
 
 == Behavioral
 
@@ -138,4 +143,7 @@ Useful in controlling object creation e.g. singleton, flyweight
 - https://github.com/HugoMatilla/Effective-JAVA-Summary[HugoMatilla/Effective-JAVA-Summary]
 - https://www.baeldung.com/java-composite-pattern[baeldung.com/java-composite-pattern]
 - https://refactoring.guru/design-patterns/composite[refactoring.guru/design-patterns/composite]
+- https://github.com/RefactoringGuru/design-patterns-java[link to examples]
+- https://en.wikipedia.org/wiki/Unix_philosophy[Unix Philosophy]
+
 
