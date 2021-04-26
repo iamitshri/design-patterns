@@ -179,5 +179,6 @@ Useful in controlling object creation e.g. singleton, flyweight
 - https://refactoring.guru/design-patterns[https://refactoring.guru/design-patterns]
 - https://en.wikipedia.org/wiki/Unix_philosophy[Unix Philosophy]
 - Head First Design Patterns Book by Elisabeth Freeman and Kathy Sierra
+- https://www.educative.io/courses/software-design-patterns-best-practices[Software Design Patterns]
 
 
