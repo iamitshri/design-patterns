@@ -55,6 +55,7 @@ Useful in controlling object creation e.g. singleton, flyweight
 - e.g. StringBuilder (loosely compared). any object creation where we create object step by step, DocumentBuilder
 
 === Prototype
+- Use the Prototype Pattern when creating an instance of a given class is either expensive or complicated.
 - Create new objects by copying existing objects. The object whose copies are made is called the prototype
 - Creating new objects is more expensive than copying existing objects
 - Think about shallow vs deep copy
@@ -100,8 +101,10 @@ Useful in controlling object creation e.g. singleton, flyweight
 === Flyweight
 - The term comes from boxing and stands for a fighter who weighs less than 111 lbs.
 - Sharing state among many fine-grained objects for efficiency.
+- Centralizes state for many “virtual” objects into a single location.
 - Memory saving and Object explosion is avoided by sharing intrinsic state and extrinsic state is calculated
-- Common state between objects is intrinsic.
+- Reduces the number of object instances at runtime, saving memory.
+
 
 === Proxy
 - Proxies control and manage access to real object (think of Paralegal and Lawyer)
@@ -117,12 +120,22 @@ Useful in controlling object creation e.g. singleton, flyweight
 == Behavioral
 
 === Memento
+- Use the Memento Pattern when you need to be able to return an object to one of its previous states.
+- e.g. java.io.Serializable
 
 === State
+- The State Pattern allows an object to alter its behavior when its internal state changes.
+- Encapsulate state based behavior and delegate behavior to the current state
+- The object will appear to change its class
+- With the State Pattern, we have a set of behaviors encapsulated in state objects; at any time the context is delegating to one of those states.
+- Exhibit different behaviors in different states
 
 === Strategy
-
+- Encapsulate interchangeable behaviors and use delegation to decide which behavior to use
+- e.g. custom comparator can be passed to this Collections.sort(list,comparator)
 === Template
+- Subclasses decide how to implement steps in the algorithm
+- Allows subclasses to define parts of an algorithm without modifying the overall structure or steps of the algorithm
 
 === Visitor
 
@@ -136,8 +149,7 @@ Useful in controlling object creation e.g. singleton, flyweight
 - Use when you want to give more than one object a chance to handle a request.
 - Decouples the sender of the request and its receivers.
 - Each receiver contains reference to next receiver.
-- If receiver can not handle the request it passes to the next receiver.
-- Receiver can process request and then either propagate or drop
+- Each handler in turn examines a request and either handles it or passes it on to the next object in the chain
 - e.g. javax.servlet.Filter.doFilter method or mouseclick events on webpage
 
 == Additional References
