@@ -1,0 +1,141 @@
+= Design Patterns
+
+== https://github.com/RefactoringGuru/design-patterns-java[link to examples]
+
+== Object Oriented Design Tips
+
+- SOLID
+* Single responsibility principle
+** Classes should aim for high cohesiveness
+* Open Closed Principle
+** Classes should be closed for modification but open for extension
+* Liskov Substitution Principle
+* Interface Segregation Principle
+* Dependency Inversion Principle
+    - Depend upon abstractions. Do not depend upon concrete classes.
+    - High-level components should not depend on our low-level components, rather, they should both depend on abstractions.
+
+
+- YAGNI
+* You ain't going to need it.
+* You don't need it now.
+** Don't add new functionality until its necessary.
+- KISS
+* Keep it simple stud
+- DRY
+* Dont repeat yourself
+- OverEngineering
+* Avoid adding those extra features, safety, bells and whistles your customers don't care about
+- https://en.wikipedia.org/wiki/Unix_philosophy[Unix Philosophy]
+
+- Parts of code that changes together, stays together
+* Separate out parts of code that vary or change from those that remain the same.
+- Code to an interface and not against a concrete implementation
+- Encapsulate behaviors
+- Favor Composition over inheritance
+- Components are loosely coupled and talk to each other over a well-defined API
+- Fine line between complexity and understandability vs Flexible & Extensible
+
+== Creational
+
+=== Static Factory
+- Decouple client code from the concrete classes
+- Advantages
+* Unlike constructors, they have names.
+Readability improvement
+* Unlike constructors, they are not required to create new objects.
+Useful in controlling object creation e.g. singleton, flyweight
+* Unlike constructors, they can return an object of any subtype of their return type
+* Class of the returned object can vary from call to cal as a function of input param
+- Disadvantages:
+* Classes only providing factories and w/o public or protected constructors, can not be subclassed
+* hard to notice
+- e.g. java.util.Calendar.getInstance()
+
+=== Builder
+- Used to build complex objects
+- Build objects with a mix of required and non-required parameters
+- e.g. StringBuilder (loosely compared). any object creation where we create object step by step, DocumentBuilder
+
+=== Prototype
+- Create new objects by copying existing objects. The object whose copies are made is called the prototype
+- Creating new objects is more expensive than copying existing objects
+- Think about shallow vs deep copy
+- e.g. clone method exposed by Object class
+
+=== Singleton
+- Only one object is created in JVM
+- Think about cost of creation and use lazy or eager initialization
+- Think about single threaded vs multi threaded environment
+- e.g. java.lang.Runtime, java.awt.Desktop
+
+
+=== Abstract Factory
+- This Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+- factory of factories
+
+
+== Structural
+
+=== Adapter
+- Allow interoperability
+
+=== Bridge
+- Allows varying abstractions as well as implementations
+- Decouples an implementation so that it is not bound permanently to an interface
+- Abstraction and implementation can be extended independently
+- Changes to the concrete abstraction classes don't affect the client
+
+=== Composite
+- Represents hierarchical tree like relation
+- Composite and leaf
+- The composite pattern is meant to allow treating individual objects and compositions of objects, or “composites” in the same way.
+
+=== Decorator
+- A wrapper on the class to enhance or extend the behavior of an object dynamically
+
+=== Facade
+- Decouple client from complex subsystem of components
+- Simplifies interface
+- Facade deals with interfaces, not implementation.
+- Hide internal complexity behind a single interface that appears simple on the outside
+
+=== Flyweight
+- The term comes from boxing and stands for a fighter who weighs less than 111 lbs.
+- Sharing state among many fine-grained objects for efficiency.
+- Memory saving and Object explosion is avoided by sharing intrinsic state and extrinsic state is calculated
+- Common state between objects is intrinsic.
+
+=== Proxy
+
+== Behavioral
+
+=== Memento
+
+=== State
+
+=== Strategy
+
+=== Template
+
+=== Hollywood Principle (Don't call us, we will call you)
+
+=== Visitor
+
+=== Mediator
+
+=== Observer
+
+=== Iterator
+
+=== Chain of Responsibility
+
+
+
+== Additional References
+- https://github.com/marhan/effective-java-examples[marhan/effective-java-examples]
+- https://github.com/jbloch/effective-java-3e-source-code[jbloch/effective-java-3e-source-code]
+- https://github.com/HugoMatilla/Effective-JAVA-Summary[HugoMatilla/Effective-JAVA-Summary]
+- https://www.baeldung.com/java-composite-pattern[baeldung.com/java-composite-pattern]
+- https://refactoring.guru/design-patterns/composite[refactoring.guru/design-patterns/composite]
+
