@@ -5,6 +5,7 @@
 :toclevels: 6
 toc::[]
 
+== Know the antipatterns as well: https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Anti-Patterns[https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Anti-Patterns]
 == Object Oriented Design Tips
 
 - SOLID
