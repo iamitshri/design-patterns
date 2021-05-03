@@ -16,7 +16,8 @@ toc::[]
 * Abstraction
 ** Only relevant, client tailored API is exposed to clients
 * Polymorphism
-** Method changes behavior at runtime
+** Dynamic Polymorphism: Method changes behavior at runtime
+** Static polymorphism: Method overloading
 * Inheritance
 ** Reusing parent class functionality
 * Encapsulation
