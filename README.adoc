@@ -1,7 +1,6 @@
 :sectanchors:
 :sectlinks:
 :sectnumlevels: 6
-:toc-title: Design Patterns
 :toc: macro
 :toclevels: 6
 toc::[]
@@ -45,9 +44,10 @@ toc::[]
 - Components are loosely coupled and talk to each other over a well-defined API
 - Fine line between complexity and understandability vs Flexible & Extensible
 
-== Creational
+== Design Patterns
+=== Creational
 
-=== Static Factory
+==== Static Factory
 - Decouple client code from the concrete classes
 - Advantages
 * Unlike constructors, they have names.
@@ -61,56 +61,56 @@ Useful in controlling object creation e.g. singleton, flyweight
 * hard to notice
 - e.g. java.util.Calendar.getInstance()
 
-=== Builder
+==== Builder
 - Used to build complex objects
 - Build objects with a mix of required and non-required parameters
 - e.g. StringBuilder (loosely compared). any object creation where we create object step by step, DocumentBuilder
 
-=== Prototype
+==== Prototype
 - Use the Prototype Pattern when creating an instance of a given class is either expensive or complicated.
 - Create new objects by copying existing objects. The object whose copies are made is called the prototype
 - Creating new objects is more expensive than copying existing objects
 - Think about shallow vs deep copy
 - e.g. clone method exposed by Object class
 
-=== Singleton
+==== Singleton
 - Only one object is created in JVM
 - Think about cost of creation and use lazy or eager initialization
 - Think about single threaded vs multi threaded environment
 - e.g. java.lang.Runtime, java.awt.Desktop
 
 
-=== Abstract Factory
+==== Abstract Factory
 - This Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 - factory of factories
 
 
-== Structural
+=== Structural
 
-=== Adapter
+==== Adapter
 - Allow interoperability
 
-=== Bridge
+==== Bridge
 - Allows varying abstractions as well as implementations
 - Decouples an implementation so that it is not bound permanently to an interface
 - Abstraction and implementation can be extended independently
 - Changes to the concrete abstraction classes don't affect the client
 
-=== Composite
+==== Composite
 - Represents hierarchical tree like relation
 - Composite and leaf
 - The composite pattern is meant to allow treating individual objects and compositions of objects, or “composites” in the same way.
 
-=== Decorator
+==== Decorator
 - A wrapper on the class to enhance or extend the behavior of an object dynamically
 
-=== Facade
+==== Facade
 - Decouple client from complex subsystem of components
 - Simplifies interface
 - Facade deals with interfaces, not implementation.
 - Hide internal complexity behind a single interface that appears simple on the outside
 
-=== Flyweight
+==== Flyweight
 - The term comes from boxing and stands for a fighter who weighs less than 111 lbs.
 - Sharing state among many fine-grained objects for efficiency.
 - Centralizes state for many “virtual” objects into a single location.
@@ -118,7 +118,7 @@ Useful in controlling object creation e.g. singleton, flyweight
 - Reduces the number of object instances at runtime, saving memory.
 
 
-=== Proxy
+==== Proxy
 - Proxies control and manage access to real object (think of Paralegal and Lawyer)
 - The Decorator Pattern adds behavior to an object, while Proxy controls access.
 - Remote Proxy
@@ -129,53 +129,53 @@ Useful in controlling object creation e.g. singleton, flyweight
     * Acts as a surrogate for the object before and while it is being created
 - e.g. java.rmi.* package
 
-== Behavioral
+=== Behavioral
 
-=== Memento
+==== Memento
 - Use the Memento Pattern when you need to be able to return an object to one of its previous states.
 - e.g. java.io.Serializable
 
-=== State
+==== State
 - The State Pattern allows an object to alter its behavior when its internal state changes.
 - Encapsulate state based behavior and delegate behavior to the current state
 - The object will appear to change its class
 - With the State Pattern, we have a set of behaviors encapsulated in state objects; at any time the context is delegating to one of those states.
 - Exhibit different behaviors in different states
 
-=== Strategy
+==== Strategy
 - Encapsulate interchangeable behaviors and use delegation to decide which behavior to use
 - e.g. custom comparator can be passed to this Collections.sort(list,comparator)
 
-=== Template
+==== Template
 - Subclasses decide how to implement steps in the algorithm
 - Allows subclasses to define parts of an algorithm without modifying the overall structure or steps of the algorithm
 
-=== Visitor
+==== Visitor
 - Allows you to add operations to a composite/object hierarchy structure without changing the structure itself.
 - Adding new operations is relatively easy.
 - The code for operations performed by the Visitor is centralized.
 
-=== Mediator
+==== Mediator
 - Use the Mediator Pattern to centralize complex communications and control between related objects.
 - Components do not need to know about each other
 - They only talk to a mediator
 - Simplifies maintenance of the system by centralizing control logic.
 
-=== Observer
+==== Observer
 - A one-to-many dependency between objects so that when one object changes state all the dependents are notified
 - Publish-subscribe model where subscribers get notified when publisher notifies
 
-=== Iterator
+==== Iterator
 - Allows traversal through a aggregate or a collection without exposing its internal details.
 - The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called an iterator
 
-=== Command
+==== Command
 - The Command Pattern allows us to decouple the requester of an action from the object that actually performs the action.
 - Encapsulates a request as an object
 - A command object encapsulates a request to do something (like turn on a light) on a specific object (say, the living room light object)
 
 
-=== Chain of Responsibility
+==== Chain of Responsibility
 - Use when you want to give more than one object a chance to handle a request.
 - Decouples the sender of the request and its receivers.
 - Each receiver contains reference to next receiver.
