@@ -10,19 +10,38 @@ toc::[]
 - https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Anti-Patterns[https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Anti-Patterns]
 
 
-== Object Oriented Design Tips
+== Object Oriented Design
+
+- Object-Oriented Design
+* Abstraction
+** Only relevant, client tailored API is exposed to clients
+* Polymorphism
+** Method changes behavior at runtime
+* Inheritance
+** Reusing parent class functionality
+* Encapsulation
+** Hiding information and keeping related functionality together
+** Encapsulation refers to the idea that objects should manage their own behavior and state, so that their collaborators need not concern themselves with the object's inner workings
+* Composition, Aggregation
+** Instead of inheritance, composition uses the object to achieve code reuse
+** Aggregation: Relation where A has B and B can exist without A
+** Composition: Relation where A has B and B can NOT exist without A
 
 - SOLID
 * Single responsibility principle
 ** Classes should aim for high cohesiveness
 ** Cohesion is a measure of how closely a class or a module supports a single purpose or responsibility.
 * Open Closed Principle
+    ** Should be open for extension, but closed for modification
 ** Classes should be closed for modification but open for extension
 * Liskov Substitution Principle
+    ** Subtypes must be substitutable for their base types
 * Interface Segregation Principle
+    ** clients should not be forced to depend on methods that they do not use
 * Dependency Inversion Principle
     - Depend upon abstractions. Do not depend upon concrete classes.
     - High-level components should not depend on our low-level components, rather, they should both depend on abstractions.
+    - Abstractions should not depend on details.  Details should depend upon abstractions
 - YAGNI
 * You ain't going to need it.
 * You don't need it now.
@@ -42,6 +61,17 @@ toc::[]
 - Don't call us we will call you
 - Components are loosely coupled and talk to each other over a well-defined API
 - Fine line between complexity and understandability vs Flexible & Extensible
+- Boys Scout Rule
+    * Leave your code better than you found it
+- Broken window Theory
+    * Fix the bad code as soon as possible before it encourages other to pile on more.
+- Explicit Dependencies (Constructor Injection/ Method Parameters)
+    * Define explicit dependencies on collaborator before creating object or calling method
+- Hollywood Principle
+    * Don't Call Us, We'll Call You.
+    * Polling vs event
+- Tell-Don't-Ask
+    * It is better to issue an object a command do perform some operation or logic, rather than to query its state and then take some action as a result
 
 == Design Patterns
 === Creational
