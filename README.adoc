@@ -9,7 +9,6 @@ toc::[]
 == Resources
 - Know the antipatterns as well: https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Anti-Patterns[https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Architecture/Anti-Patterns]
 
-- https://deviq.com/design-patterns/design-patterns-overview[https://deviq.com/design-patterns/design-patterns-overview]
 
 == Object Oriented Design Tips
 
@@ -191,5 +190,6 @@ Useful in controlling object creation e.g. singleton, flyweight
 - https://en.wikipedia.org/wiki/Unix_philosophy[Unix Philosophy]
 - Head First Design Patterns Book by Elisabeth Freeman and Kathy Sierra
 - https://www.educative.io/courses/software-design-patterns-best-practices[Software Design Patterns]
+- https://deviq.com/design-patterns/design-patterns-overview[https://deviq.com/design-patterns/design-patterns-overview]
 
 
